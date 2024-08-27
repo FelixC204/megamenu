@@ -1,0 +1,33 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+client_id = "ca4aa42ddca5bba06264d69b79fc3b2f"
+name = "megamenu"
+handle = "megamenu-7"
+application_url = "https://biology-upper-campaign-investigator.trycloudflare.com"
+embedded = true
+
+[build]
+automatically_update_urls_on_dev = true
+dev_store_url = "quickstart-d6331d32.myshopify.com"
+include_config_on_deploy = true
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "write_products"
+
+[auth]
+redirect_urls = [
+  "https://biology-upper-campaign-investigator.trycloudflare.com/auth/callback",
+  "https://biology-upper-campaign-investigator.trycloudflare.com/auth/shopify/callback",
+  "https://biology-upper-campaign-investigator.trycloudflare.com/api/auth/callback"
+]
+
+[webhooks]
+api_version = "2024-07"
+
+  [[webhooks.subscriptions]]
+  topics = [ "app/uninstalled" ]
+  uri = "/webhooks"
+
+[pos]
+embedded = false

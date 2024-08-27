@@ -1,0 +1,63 @@
+<div class="mega-menu">
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>  
+</div>
+
+<style>
+    .mega-menu {
+        display: flex;  
+        position: fixed;
+        top: 0;
+        background-color: #f1f1f1;
+        z-index: 9999;
+        min-height: 60px;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    .mega-menu .nav {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .mega-menu .nav-item {
+        margin: 0 10px;
+    }
+
+    .mega-menu .nav-link {
+        text-decoration: none;
+        color: #333;
+    }
+
+    .mega-menu .nav-link:hover {
+        color: #000;
+    }
+
+    .mega-menu .nav-link.active {
+        color: #000;
+    }
+</style>
+
+{% schema %}
+{
+    "name": "Mega Menu",
+    "target": "body",
+    "settings": [
+       
+        ]
+}
+{% endschema %}
