@@ -1,3 +1,4 @@
+import { Session } from "@shopify/shopify-app-remix/server";
 import db from "../db.server.js";
 
 /**
@@ -7,18 +8,8 @@ import db from "../db.server.js";
  * @throws {Error} Nếu không tìm thấy session cho shop
  */
 
-export async function getShop(){
-    const shop = await db.session.findFirst({
-        select: { shop: true },
-      });
-      if (!shop) {
-        throw new Error("No shop found in the database");
-      }
-      return shop.shop;
-}
 
-export async function getAccessToken() {
-    const shopDomain = getShop()
+export async function getAccessToken(shopDomain) { 
     const session = await db.session.findFirst({
     where: { shop: shopDomain },
     select: { accessToken: true },
@@ -31,16 +22,16 @@ export async function getAccessToken() {
   return session.accessToken;
 }
 
-export async function getSession() {
-  const shopDomain = await getShop();  
-  const session = await db.session.findFirst({
-      where: { shop: shopDomain },
-  });
+// export async function getSession() {
+//   const shopDomain = await getShop();  
+//   const session = await db.session.findFirst({
+//       where: { shop: shopDomain },
+//   });
 
-  if (!session) {
-      throw new Error("No session found for the shop");
-  }
+//   if (!session) {
+//       throw new Error("No session found for the shop");
+//   }
 
-  return session;
-}
+//   return session;
+// }
 

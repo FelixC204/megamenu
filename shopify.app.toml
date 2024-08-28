@@ -3,7 +3,7 @@
 client_id = "ca4aa42ddca5bba06264d69b79fc3b2f"
 name = "megamenu"
 handle = "megamenu-7"
-application_url = "https://brooks-labeled-recommend-merger.trycloudflare.com"
+application_url = "https://blood-julie-dx-bingo.trycloudflare.com"
 embedded = true
 
 [build]
@@ -17,9 +17,9 @@ scopes = "read_script_tags,read_themes,write_products,write_script_tags,write_th
 
 [auth]
 redirect_urls = [
-  "https://brooks-labeled-recommend-merger.trycloudflare.com/auth/callback",
-  "https://brooks-labeled-recommend-merger.trycloudflare.com/auth/shopify/callback",
-  "https://brooks-labeled-recommend-merger.trycloudflare.com/api/auth/callback"
+  "https://blood-julie-dx-bingo.trycloudflare.com/auth/callback",
+  "https://blood-julie-dx-bingo.trycloudflare.com/auth/shopify/callback",
+  "https://blood-julie-dx-bingo.trycloudflare.com/api/auth/callback"
 ]
 
 [webhooks]

@@ -20,24 +20,21 @@ import { useLoaderData } from "@remix-run/react";
 import { getAccessToken, getSession } from "../utils/sessionManager.js";
 
 export const loader = async ({ request }) => {
-  await authenticate.admin(request);
-  const accessToken = await getAccessToken();
-  const session = await getSession();
-  return json({ accessToken , session });
+  await authenticate.admin(request);  
+  const shopDomain = "onextstore.myshopify.com";
+  const Access_Token = await getAccessToken(shopDomain);
+  return json({ Access_Token });
 };
 
 
 
 export default function Index() {
-  const { accessToken } = useLoaderData();
-  const { session } = useLoaderData();
-  const sessionUser = JSON.stringify(session, null, 2)
-  console.log("Access Token:", accessToken);
+  const {Access_Token} = useLoaderData();
+  console.log(prisma.session);
   return (
     <div>
       <h1>Shopiy Themes</h1>
-      <p>Access Token: {accessToken}</p>
-      <p>session: {sessionUser}</p>
+      <p>{Access_Token}</p>
     </div>
   );
 }
