@@ -31,13 +31,6 @@ model Session {
   emailVerified Boolean?  @default(false)
 }
 
-model MenuItem {
-  id        Int      @id @default(autoincrement())
-  label     String
-  url       String
-  order     Int
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-}
+
 
 

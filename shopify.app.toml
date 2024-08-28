@@ -3,7 +3,7 @@
 client_id = "ca4aa42ddca5bba06264d69b79fc3b2f"
 name = "megamenu"
 handle = "megamenu-7"
-application_url = "https://biology-upper-campaign-investigator.trycloudflare.com"
+application_url = "https://brooks-labeled-recommend-merger.trycloudflare.com"
 embedded = true
 
 [build]
@@ -13,13 +13,13 @@ include_config_on_deploy = true
 
 [access_scopes]
 # Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
-scopes = "write_products"
+scopes = "read_script_tags,read_themes,write_products,write_script_tags,write_themes"
 
 [auth]
 redirect_urls = [
-  "https://biology-upper-campaign-investigator.trycloudflare.com/auth/callback",
-  "https://biology-upper-campaign-investigator.trycloudflare.com/auth/shopify/callback",
-  "https://biology-upper-campaign-investigator.trycloudflare.com/api/auth/callback"
+  "https://brooks-labeled-recommend-merger.trycloudflare.com/auth/callback",
+  "https://brooks-labeled-recommend-merger.trycloudflare.com/auth/shopify/callback",
+  "https://brooks-labeled-recommend-merger.trycloudflare.com/api/auth/callback"
 ]
 
 [webhooks]
